@@ -14,36 +14,42 @@
 </head>
 <!-- Write your comments here -->
 <body>
+    
+    <div class="mc">
+    <div class="bg">
+        <br> <br>
+        <h2>Are you a ..</h2>
+        <br>
     <div id="Playerprofession">
         <input id="playerInfo" checked type="radio" value="Student" name="profession" onclick="PlayerInfo(0)"> Student <!-- onclick="PlayerInfo(0)" -->
-        <br />
+        <br /> <br>
         <input id="playerInfo" type="radio" value="Faculty" name="profession"  onclick="PlayerInfo(1)"> Faculty Member <!-- onclick="PlayerInfo(1)" -->
-        <br />
-        <input id="playerInfo" type="radio" value="Other" name="profession"  onclick="PlayerInfo(1)"> Outsider <!--  onclick="PlayerInfo(1)"  -->
         <br />
     </div>
 
     <div id="enterDetails">
         <br>
-        <h4>Name</h4>
+        <h2>Name</h2>
         <input id="name" name="enterName" type="text">
         <br> <br>
     </div>
 
     <div id="studentDetails">
-        <h4>Department</h4>
+        <h3>Department</h3>
 
+        <br>
         <input checked id="departmentRadio"  type="radio" value="gd" name="department"  onclick="Department(0)"> Game Design
         <input id="departmentRadio" type="radio" value="animation" name="department"  onclick="Department(0)"> Animation
         <input id="departmentRadio" type="radio" value="id" name="department"  onclick="Department(0)"> Interior Design
+        <br> <br>
         <input id="departmentRadio" type="radio" value="fd" name="department"  onclick="Department(0)"> Fashion Design
         <input id="departmentRadio" type="radio" value="bfa" name="department"  onclick="Department(0)"> BFA <!--  onclick="Department(0)"  -->
         <input id="departmentRadio" type="radio" value="diploma" name="department"  onclick="Department(1)"> Diploma <!--  onclick="Department(1)"  -->
         <input id="departmentRadio" type="radio" value="certificate" name="department"  onclick="Department(2)"> Certificate <!--  onclick="Department(2)"  -->
-        <br>
+        <br> <br>
 
         <div id  = "yearOption">
-        <h4>Year</h4>
+        <h3>Year</h3>
         <select name="year">
             <option selected="selected" value="1st">1st</option>
             <option value="2nd">2nd</option>
@@ -53,7 +59,7 @@
         </div>
 
         <div id = "diplomaOption" class="selectOption">
-        <h4>Subject</h4>
+        <h3>Subject</h3>
         <select name="diplomaBatch">
             <option selected="selected" value="animation">Animation</option>
             <option value="fashion">Fashion Design</option>
@@ -63,7 +69,7 @@
         </div>
 
         <div id = "certificateOption" class="selectOption">
-        <h4>Subject</h4>
+        <h3>Subject</h3>
         <select name="certificateBatch">
             <option selected="selected" value="animation">Animation</option>
             <option value="fashion">Fashion Design</option>
@@ -74,7 +80,9 @@
         </div>
         <br>
     </div>    
-    <button id="join" onclick="Disable(this)" type="button">Join</button>
+    <button class="button" id="join" onclick="Disable(this)" type="button">Join</button>
+</div>
+</div>
 </body>
 <script>
 function Department(x)
@@ -113,6 +121,7 @@ function Disable(x)
 {
     x.disabled = true;
 }
+
 function startInfo()
 {
     PlayerInfo(0);
