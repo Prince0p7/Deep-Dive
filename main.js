@@ -36,7 +36,6 @@ var studentInfo = document.getElementsByName('department');
 
 var insertBtn = document.querySelector("#join");
 
-
 function generateRandomID(string_length)
 {
     var randomString = '';
@@ -51,8 +50,8 @@ function generateRandomID(string_length)
 var SerialNo = 0;
 function InsertData()
 {
-   SerialNo = generateRandomID(5);
-   localStorage.setItem("ID", SerialNo);
+    SerialNo = generateRandomID(5);
+    localStorage.setItem("ID", SerialNo);
     PlayerProfessionRadio();
     set(ref(db, "People/"+ SerialNo),
     {
@@ -165,16 +164,6 @@ if(insertBtn)
 {
     insertBtn.addEventListener('click', InsertData);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
