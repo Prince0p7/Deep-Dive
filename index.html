@@ -74,7 +74,7 @@
         </div>
         <br>
     </div>    
-    <button id="join" type="button">Join</button>
+    <button id="join" onclick="Disable(this)" type="button">Join</button>
 </body>
 <script>
 function Department(x)
@@ -108,6 +108,10 @@ function PlayerInfo(x)
     {
         document.getElementById("studentDetails").style.display = "block";
     }
+}
+function Disable(x)
+{
+    x.disabled = true;
 }
 </script>
 </html>
