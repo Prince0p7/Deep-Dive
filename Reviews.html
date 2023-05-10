@@ -22,10 +22,16 @@
     <textarea id="feedback" cols="50" name="comments" rows="20"></textarea>
 
     <br>
-    <button id="submit" type="button">Submit</button>
+    <button id="submit" onclick="Disable(this)" type="button">Submit</button>
 
     <br>
     <!-- Body -->
 </body>
 <script type="module" src = "main.js"></script>
+<script>
+function Disable(x)
+{
+    x.disabled = true;
+}
+</script>
 </html>
