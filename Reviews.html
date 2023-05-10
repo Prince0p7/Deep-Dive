@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <title>Reviews</title>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <div class="mc">
+    <div class="bg">
     <div>
-        <input checked name="ratings" type="radio" value="1" /> 1 Star
+        <input name="ratings" type="radio" value="1" /> 1 Star
         <br />
         <input name="ratings" type="radio" value="2" /> 2 Stars
         <br />
@@ -19,11 +23,13 @@
     </div>
 
     <br>
+    <h4> Feedback </h4>
     <textarea id="feedback" cols="50" name="comments" rows="20"></textarea>
 
     <br>
-    <button id="submit" onclick="Disable(this)" type="button">Submit</button>
-
+    <button class="button" id="submit" onclick="Disable(this)" type="button">Submit</button>
+</div>
+</div>
     <br>
     <!-- Body -->
 </body>
