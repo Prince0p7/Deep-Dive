@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase-database.js"></script>
+    <script type="module" src = "main.js"></script>
+    <title>Data Entry</title>
+</head>
+<!-- Write your comments here -->
+<body>
+    <div id="Playerprofession">
+        <input id="playerInfo" checked type="radio" value="Student" name="profession" onclick="PlayerInfo(0)"> Student <!-- onclick="PlayerInfo(0)" -->
+        <br />
+        <input id="playerInfo" type="radio" value="Faculty" name="profession"  onclick="PlayerInfo(1)"> Faculty Member <!-- onclick="PlayerInfo(1)" -->
+        <br />
+        <input id="playerInfo" type="radio" value="Other" name="profession"  onclick="PlayerInfo(1)"> Outsider <!--  onclick="PlayerInfo(1)"  -->
+        <br />
+    </div>
+
+    <div id="enterDetails">
+        <br>
+        <h4>Name</h4>
+        <input id="name" name="enterName" type="text">
+        <br> <br>
+    </div>
+
+    <div id="studentDetails">
+        <h4>Department</h4>
+
+        <input checked id="departmentRadio"  type="radio" value="gd" name="department"  onclick="Department(0)"> Game Design
+        <input id="departmentRadio" type="radio" value="animation" name="department"  onclick="Department(0)"> Animation
+        <input id="departmentRadio" type="radio" value="id" name="department"  onclick="Department(0)"> Interior Design
+        <input id="departmentRadio" type="radio" value="fd" name="department"  onclick="Department(0)"> Fashion Design
+        <input id="departmentRadio" type="radio" value="bfa" name="department"  onclick="Department(0)"> BFA <!--  onclick="Department(0)"  -->
+        <input id="departmentRadio" type="radio" value="diploma" name="department"  onclick="Department(1)"> Diploma <!--  onclick="Department(1)"  -->
+        <input id="departmentRadio" type="radio" value="certificate" name="department"  onclick="Department(2)"> Certificate <!--  onclick="Department(2)"  -->
+        <br>
+
+        <div id  = "yearOption">
+        <h4>Year</h4>
+        <select name="year">
+            <option selected="selected" value="1st">1st</option>
+            <option value="2nd">2nd</option>
+            <option value="3rd">3rd</option>
+            <option value="4th">4th</option>
+        </select>
+        </div>
+
+        <div id = "diplomaOption" class="selectOption">
+        <h4>Subject</h4>
+        <select name="diplomaBatch">
+            <option selected="selected" value="animation">Animation</option>
+            <option value="fashion">Fashion Design</option>
+            <option value="interior">Interior Design</option>
+            <option value="painting">Painting</option>
+        </select>
+        </div>
+
+        <div id = "certificateOption" class="selectOption">
+        <h4>Subject</h4>
+        <select name="certificateBatch">
+            <option selected="selected" value="animation">Animation</option>
+            <option value="fashion">Fashion Design</option>
+            <option value="interior">Interior Design</option>
+            <option value="painting">Painting</option>
+            <option value="photography">Photography</option>
+        </select>
+        </div>
+        <br>
+    </div>    
+    <button id="join" type="button">Join</button>
+</body>
+<script>
+function Department(x)
+{
+if(x == 0)
+{
+    document.getElementById("yearOption").style.display = "block";
+    document.getElementById("diplomaOption").style.display = "none";
+    document.getElementById("certificateOption").style.display = "none";
+}
+if(x == 1)
+{
+    document.getElementById("yearOption").style.display = "none";
+    document.getElementById("diplomaOption").style.display = "block";
+    document.getElementById("certificateOption").style.display = "none";
+}
+if(x == 2)
+{
+    document.getElementById("yearOption").style.display = "none";
+    document.getElementById("diplomaOption").style.display = "none";
+    document.getElementById("certificateOption").style.display = "block";
+}
+}
+function PlayerInfo(x)
+{
+    if(x == 1)
+    {
+        document.getElementById("studentDetails").style.display = "none";
+    }
+    else
+    {
+        document.getElementById("studentDetails").style.display = "block";
+    }
+}
+</script>
+</html>
